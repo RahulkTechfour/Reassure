@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:elevation="10dp"
+            app:cardCornerRadius="@dimen/_10sdp">
+
+            <LinearLayout
+                android:id="@+id/linDraftGredient"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:background="@drawable/button_bg_rounded_corners">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.3"
+                    android:orientation="vertical"
+                    android:layout_margin="@dimen/_5sdp">
+                    <com.luminous.pdi.custom_text_view.TextViewSemiBold
+                        android:id="@+id/txtDraftName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="1dp"
+                        android:text="Rojana Bajaar"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                    <com.luminous.pdi.custom_text_view.TextViewRegular
+                        android:id="@+id/txtDivision"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="1dp"
+                        android:layout_below="@+id/txtDraftName"
+                        android:textSize="@dimen/_12sdp"
+                        android:textColor="@color/colorWhite"
+                        android:text="Division" />
+
+                    <com.luminous.pdi.custom_text_view.TextViewSemiBold
+                        android:id="@+id/txtDraftDiv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="1dp"
+                        android:layout_marginLeft="65dp"
+                        android:layout_below="@+id/txtDraftName"
+                        android:layout_toRightOf="@+id/txtDivision"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/_12sdp"
+                        android:text="Fan"/>
+
+                    <com.luminous.pdi.custom_text_view.TextViewRegular
+                        android:id="@+id/txtDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:layout_below="@+id/txtDraftDiv"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/_12sdp"
+                        android:padding="1dp"
+                        android:text="Date" />
+
+                    <com.luminous.pdi.custom_text_view.TextViewSemiBold
+                        android:id="@+id/txtDraftDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:layout_marginLeft="87dp"
+                        android:layout_toRightOf="@+id/txtDate"
+                        android:layout_below="@+id/txtDivision"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/_12sdp"
+                        android:padding="1dp"
+
+                        android:text="21jan2020" />
+
+                    <com.luminous.pdi.custom_text_view.TextViewRegular
+                        android:id="@+id/txtRequestNO"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:layout_below="@+id/txtDate"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/_12sdp"
+                        android:padding="1dp"
+                        android:text="Request No" />
+
+                    <com.luminous.pdi.custom_text_view.TextViewSemiBold
+                        android:id="@+id/txtDrafRequestNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:layout_marginLeft="40dp"
+                        android:layout_toRightOf="@+id/txtRequestNO"
+                        android:layout_below="@+id/txtDate"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/_12sdp"
+                        android:padding="1dp"
+
+                        android:text="21jan2020" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.7"
+                    android:gravity="right"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/ivDel"
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:src="@drawable/ic_delete"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:layout_marginLeft="@dimen/_35sdp"
+                        android:layout_alignParentLeft="true"/>
+
+                    <com.luminous.pdi.custom_text_view.TextViewRegular
+                        android:id="@+id/txtStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:layout_below="@+id/ivDel"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/_12sdp"
+                        android:padding="1dp"
+                        android:text="Status" />
+
+                    <com.luminous.pdi.custom_text_view.TextViewSemiBold
+                        android:id="@+id/txtDraftStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:layout_below="@+id/txtStatus"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/_12sdp"
+                        android:padding="1dp"
+                        android:text="Completed" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</layout>

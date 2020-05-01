@@ -1,0 +1,756 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/layout_border">
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:id="@+id/addproductlightlist_toolbar"
+        android:background="#2A50CB"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_backarrow"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:id="@+id/addproductlight_backimage"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add Product"
+                android:layout_centerInParent="true"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/_20sdp"
+                />
+            <ImageView
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:src="@drawable/ic_deleteimage"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:backgroundTint="@color/colorWhite"
+                android:id="@+id/ivDraftEditImage"
+                />
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/addproductlightlist_toolbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/Draftsearchvisitfrag_relthree"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/_20sdp">
+
+                <LinearLayout
+                    android:id="@+id/Draftsearchvisitfrag_linone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <RelativeLayout
+                        android:id="@+id/Draftsearchvisitfrag_relone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <com.luminous.pdi.custom_text_view.TextViewRegular
+                            android:id="@+id/Drafttvsearchvisitfragment_quantity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Quantity:"
+                            android:textSize="17sp" />
+
+                        <EditText
+                            android:id="@+id/Draftet_searchvisitfragquantityammount"
+                            android:layout_width="170dp"
+                            android:layout_height="40dp"
+                            android:layout_below="@+id/Drafttvsearchvisitfragment_quantity"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/edittextt_border"
+                            android:inputType="number"
+                            android:padding="10dp"
+                            android:textColor="#4D4D4D"
+                            android:textSize="15sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/Draftsearchvisitfrag_reltwo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:layout_weight="1">
+
+                        <com.luminous.pdi.custom_text_view.TextViewRegular
+                            android:id="@+id/Draftsearchvisitinspectiodate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentEnd="true"
+                            android:text="Inspection Date:"
+                            android:textSize="17sp" />
+
+                        <EditText
+                            android:id="@+id/Draftet_searchfragvisitinspectiondate"
+                            android:layout_width="170dp"
+                            android:layout_height="40dp"
+                            android:layout_below="@+id/Draftsearchvisitinspectiodate"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/edittextt_border"
+                            android:drawableRight="@drawable/ic_calendar"
+                            android:drawableTint="@color/cardview_dark_background"
+                            android:hint="22 Jan 2020"
+                            android:padding="10dp"
+                            android:textColor="#4D4D4D"
+                            android:textSize="15sp" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <com.luminous.pdi.custom_text_view.TextViewRegular
+                    android:id="@+id/Drafttvsearchvisit_materialname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/Draftsearchvisitfrag_linone"
+                    android:layout_marginTop="17dp"
+                    android:text="Material Name:"
+                    android:textSize="17sp" />
+
+                <!--  <EditText
+                      android:id="@+id/etsearchvisit_materialname"
+                      android:layout_width="match_parent"
+                      android:layout_height="45dp"
+                      android:layout_below="@+id/tvsearchvisit_materialname"
+                      android:layout_marginTop="8dp"
+                      android:background="@drawable/edittextt_border"
+                      android:drawableRight="@drawable/ic_search"
+                      android:drawableTint="@color/cardview_dark_background"
+                      android:hint="LIGHT ECSTACY CEIL JADE"
+                      android:padding="10dp"
+                      android:textColor="#4D4D4D"
+                      android:textSize="15sp" />-->
+
+
+                <RelativeLayout
+                    android:id="@+id/DraftllMaterilName"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_below="@+id/Drafttvsearchvisit_materialname"
+                    android:layout_marginTop="@dimen/_4sdp">
+
+
+                    <Spinner
+                        android:id="@+id/Draftsp_MaterialName"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/editHeightSize"
+                        android:background="@drawable/my_edit_text_border"
+                        android:hint="Fault Details"
+                        android:textSize="14dp" />
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/arrow_drop_down"
+                        android:clickable="true" />
+
+                </RelativeLayout>
+
+
+                <com.luminous.pdi.custom_text_view.TextViewRegular
+                    android:id="@+id/Drafttvsearchvisitfragment_secondquantity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/DraftllMaterilName"
+                    android:layout_marginTop="@dimen/_17sdp"
+                    android:text="Quantity:"
+                    android:textSize="17sp" />
+
+                <EditText
+                    android:id="@+id/Draftetsecond_addproductquantityammount"
+                    android:layout_width="170dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/Drafttvsearchvisitfragment_secondquantity"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/edittextt_border"
+                    android:hint=""
+                    android:inputType="number"
+                    android:padding="10dp"
+                    android:textColor="#4D4D4D"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/Draftnextbtnone_fragmentsearchvisit"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/Drafttvsearchvisitfragment_secondquantity"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/nextbutton_border"
+                    android:onClick="@{clickHandler::firstnextButtonClick}"
+                    android:text="Next"
+                    android:textColor="#FFFFFF"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="normal" />
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/Draftsearchvisitfrag_linthree"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Draftsearchvisitfrag_relthree"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:id="@+id/Draftsearchvisitfrag_lintwo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#EFEFEF"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <com.luminous.pdi.custom_text_view.TextViewSemiBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Invoice No."
+                        android:textSize="@dimen/_15sdp" />
+
+                    <com.luminous.pdi.custom_text_view.TextViewSemiBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="Available Qty"
+                        android:textSize="@dimen/_15sdp" />
+
+                    <com.luminous.pdi.custom_text_view.TextViewSemiBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="PDI Qty"
+                        android:textSize="@dimen/_15sdp" />
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/Draftsearchvisitfrag_recyclerviewqty"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_100sdp"
+                    android:layout_below="@+id/Draftsearchvisitfrag_lintwo"
+
+                    />
+
+                <View
+                    android:id="@+id/Draftfragmentsearchvisit_viewone"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_2sdp"
+                    android:layout_below="@+id/Draftsearchvisitfrag_recyclerviewqty"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="#632C2C2C" />
+
+                <RelativeLayout
+                    android:id="@+id/Draftsearchvisitfrag_relseven"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/Draftfragmentsearchvisit_viewone">
+
+                    <Button
+                        android:id="@+id/Draftnextbtntwo_fragmentsearchvisit"
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_marginRight="@dimen/_20sdp"
+                        android:background="@drawable/nextbutton_border"
+                        android:onClick="@{clickhandlersecondnextbtn::clickhandlersecondnextbtn}"
+                        android:text="Next"
+                        android:textColor="#ffffff"
+                        android:textSize="@dimen/_12sdp"
+                        android:textStyle="normal" />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/Draftfragmentsearchvisit_viewtwo"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_2sdp"
+                    android:layout_below="@+id/Draftsearchvisitfrag_relseven"
+                    android:background="#542C2C2C" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/Draftfragmentsearchvisit_relthree"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Draftsearchvisitfrag_linthree"
+                android:layout_margin="@dimen/_20sdp"
+                android:visibility="visible">
+
+                <com.luminous.pdi.custom_text_view.TextViewRegular
+                    android:id="@+id/Draftfragmentsearchvisittv_faultdetails"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Fault Details:"
+                    android:textSize="17sp" />
+
+                <RelativeLayout
+                    android:id="@+id/DraftllFaultList"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_below="@+id/Draftfragmentsearchvisittv_faultdetails"
+                    android:layout_marginTop="@dimen/_4sdp">
+
+
+                    <Spinner
+                        android:id="@+id/Draftsp_FanFault"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/editHeightSize"
+                        android:background="@drawable/my_edit_text_border"
+                        android:hint="Fault Details"
+                        android:textSize="14dp" />
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/arrow_drop_down"
+                        android:clickable="true" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/Draftsearchfragmentvisit_linfour"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/DraftllFaultList"
+                    android:layout_marginTop="17dp"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <com.luminous.pdi.custom_text_view.TextViewRegular
+                            android:id="@+id/Drafttvsearchvisitfragment_quantitysecond"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Quantity:"
+                            android:textSize="17sp" />
+
+                        <EditText
+                            android:id="@+id/Draftett_searchvisitfragmentquantityammount"
+                            android:layout_width="141dp"
+                            android:layout_height="45dp"
+                            android:layout_below="@+id/Drafttvsearchvisitfragment_quantitysecond"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/edittextt_border"
+                            android:hint="Quantity"
+                            android:inputType="number"
+                            android:padding="10dp"
+                            android:textColor="#4D4D4D"
+                            android:textSize="17sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+
+                        >
+
+                        <com.luminous.pdi.custom_text_view.TextViewRegular
+                            android:id="@+id/Drafttv_searchfragmentvisitbatchno"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentEnd="true"
+                            android:text="Batch No."
+                            android:textSize="@dimen/_14sdp" />
+
+                        <EditText
+                            android:id="@+id/Draftet_searchvisitfragbatchno"
+                            android:layout_width="170dp"
+                            android:layout_height="45dp"
+                            android:layout_below="@+id/Drafttv_searchfragmentvisitbatchno"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/edittextt_border"
+                            android:hint="Batch No."
+                            android:padding="10dp"
+                            android:textSize="15sp" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/Draftsearchvisitfrag_linfive"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/Draftsearchfragmentvisit_linfour"
+                    android:layout_marginTop="17dp"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+
+                        <com.luminous.pdi.custom_text_view.TextViewRegular
+                            android:id="@+id/Draftaddproducttv_manufacturedate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Manufacture Month:"
+                            android:textSize="17sp"
+
+                            />
+
+                        <EditText
+                            android:id="@+id/Draftett_addproductselectdate"
+                            android:layout_width="141dp"
+                            android:layout_height="45dp"
+                            android:layout_below="@+id/Draftaddproducttv_manufacturedate"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/edittextt_border"
+                            android:drawableRight="@drawable/ic_calendar"
+                            android:drawableTint="@color/cardview_dark_background"
+                            android:hint="Select Date:"
+                            android:padding="10dp"
+                            android:textColor="#4D4D4D"
+                            android:textSize="15sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp">
+
+                        <com.luminous.pdi.custom_text_view.TextViewRegular
+                            android:id="@+id/Draftaddproductwarrantystatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentEnd="true"
+                            android:text="Warranty status"
+                            android:textSize="17sp" />
+
+                        <EditText
+                            android:id="@+id/Draftet_addproductwarrantystatus"
+                            android:layout_width="170dp"
+                            android:layout_height="50dp"
+                            android:layout_below="@+id/Draftaddproductwarrantystatus"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/edittextt_border"
+                            android:hint="Warranty status:"
+                            android:padding="10dp"
+                            android:textColor="#4D4D4D"
+                            android:textSize="15sp" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/Draftsearchfragmentvisit_linsix"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/Draftsearchvisitfrag_linfive"
+                    android:layout_marginTop="17dp"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <com.luminous.pdi.custom_text_view.TextViewRegular
+                            android:id="@+id/Drafttvsearchvisitfragment_acceptedqty"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Accepted Qty:"
+                            android:textSize="17sp" />
+
+                        <EditText
+                            android:id="@+id/Draftett_searchvisitfragmentacceptedquan"
+                            android:layout_width="141dp"
+                            android:layout_height="45dp"
+                            android:layout_below="@+id/Drafttvsearchvisitfragment_acceptedqty"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/edittextt_border"
+                            android:hint="Quantity"
+                            android:inputType="number"
+                            android:padding="10dp"
+                            android:textColor="#4D4D4D"
+                            android:textSize="17sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+
+                        >
+
+                        <com.luminous.pdi.custom_text_view.TextViewRegular
+                            android:id="@+id/Drafttv_searchfragmentvisitrejectedqty"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentEnd="true"
+                            android:text="Rejected Qty:"
+                            android:textSize="@dimen/_14sdp" />
+
+                        <EditText
+                            android:id="@+id/Draftet_searchvisitfragquantityhint"
+                            android:layout_width="170dp"
+                            android:layout_height="45dp"
+                            android:layout_below="@+id/Drafttv_searchfragmentvisitrejectedqty"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/edittextt_border"
+                            android:hint="Quantity"
+                            android:inputType="number"
+                            android:padding="10dp"
+                            android:textColor="#4D4D4D"
+                            android:textSize="15sp" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/Draftsearchvisitfrag_addbtn"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/Draftsearchfragmentvisit_linsix"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:background="@drawable/nextbutton_border"
+                    android:onClick="AddRecycleItem"
+                    android:text="ADD"
+                    android:textColor="#ffffff" />
+
+            </RelativeLayout>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Draftfragmentsearchvisit_relthree"
+
+                android:scrollbars="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/Draftfragmenrsearchvisit_linten"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <!--    <View
+                            android:id="@+id/fragmentsearchvisit_viewthree"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_2sdp"
+                            android:layout_below="@+id/fragmentsearchvisit_relthree"
+                            android:background="#542C2C2C" />-->
+
+                    <LinearLayout
+                        android:id="@+id/Draftsearchvisitfrag_linseven"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/common_50_dp"
+                        android:background="@drawable/rectangular_view"
+
+                        android:layout_below="@+id/fragmentsearchvisit_viewthree"
+                        android:orientation="horizontal"
+                        android:weightSum="7">
+
+
+                        <com.luminous.pdi.custom_text_view.TextViewSemiBold
+                            android:id="@+id/Drafttv_fault"
+                            android:layout_width="@dimen/_99sdp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:textColor="@color/color_black"
+                            android:text="Fault"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <com.luminous.pdi.custom_text_view.TextViewSemiBold
+                            android:id="@+id/Drafttv_qty"
+                            android:layout_width="@dimen/_99sdp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="Qty"
+                            android:gravity="center"
+                            android:textColor="@color/color_black"
+
+                            android:textSize="@dimen/_12sdp" />
+
+                        <com.luminous.pdi.custom_text_view.TextViewSemiBold
+                            android:id="@+id/Drafttv_batch"
+                            android:layout_width="@dimen/_99sdp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:textColor="@color/color_black"
+
+                            android:text="Batch"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <com.luminous.pdi.custom_text_view.TextViewSemiBold
+                            android:id="@+id/Drafttv_mfg"
+                            android:layout_width="@dimen/_99sdp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="Mfg"
+                            android:gravity="center"
+                            android:textColor="@color/color_black"
+
+                            android:textSize="@dimen/_12sdp" />
+
+                        <com.luminous.pdi.custom_text_view.TextViewSemiBold
+                            android:id="@+id/Drafttv_wty"
+                            android:layout_width="@dimen/_99sdp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="Wty"
+                            android:gravity="center"
+                            android:textColor="@color/color_black"
+
+                            android:textSize="@dimen/_12sdp" />
+
+                        <com.luminous.pdi.custom_text_view.TextViewSemiBold
+                            android:id="@+id/Drafttv_accepted"
+                            android:layout_width="@dimen/_99sdp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="Accepted"
+                            android:gravity="center"
+                            android:textColor="@color/color_black"
+
+                            android:textSize="@dimen/_12sdp" />
+
+                        <com.luminous.pdi.custom_text_view.TextViewSemiBold
+                            android:id="@+id/Drafttv_rejected"
+                            android:layout_width="@dimen/_99sdp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="Rejected"
+                            android:gravity="center"
+                            android:textColor="@color/color_black"
+
+                            android:textSize="@dimen/_12sdp" />
+
+                        <com.luminous.pdi.custom_text_view.TextViewSemiBold
+                            android:id="@+id/Drafttv_edit"
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text=""
+                            android:gravity="center"
+                            android:visibility="gone"
+                            android:textColor="@color/color_black"
+
+                            android:textSize="@dimen/_12sdp" />
+
+                        <com.luminous.pdi.custom_text_view.TextViewSemiBold
+                            android:id="@+id/Drafttv_delete"
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text=""
+                            android:gravity="center"
+                            android:textColor="@color/color_black"
+
+                            android:textSize="@dimen/_12sdp" />
+
+                    </LinearLayout>
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/Draftsearchvisitfrag_recyclerviewaddeditem"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_120sdp"
+                        android:layout_below="@+id/fragmentsearchvisit_viewfour" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/blue_circle_calendar" />
+                </LinearLayout>
+            </HorizontalScrollView>
+
+
+        </RelativeLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/searchvisitfrag_lineight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <Button
+            android:id="@+id/searchvisitfrag_btnprevious"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#FEECD0"
+            android:text="Previous"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/searchvisitfrag_btnsubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#0D40AB"
+            android:text="Submit"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/searchvisitfrag_btnnext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#3D9234"
+            android:text="Next"
+            android:textColor="#FFFFFF" />
+
+    </LinearLayout>
+
+</RelativeLayout>

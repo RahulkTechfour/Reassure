@@ -1,0 +1,1332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/visitdetailstoolbarrel"
+        >
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:id="@+id/pdvisitlist_toolbar"
+            android:background="#2A50CB"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_backarrow"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true"
+                    android:id="@+id/pdivisitlist_backimage"
+
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Case Details"
+                    android:layout_centerInParent="true"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/_20sdp"
+                    />
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:background="@drawable/layout_border"
+        android:layout_below="@+id/visitdetailstoolbarrel"
+        android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp"
+        android:layout_below="@+id/visitdetailstoolbarrel"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:id="@+id/pdivisitlist_relone"
+
+            >
+            <LinearLayout
+                android:id="@+id/llVisitCall"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_height="wrap_content"
+                >
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:background="@drawable/oval_view"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/ivVisitStatusCall"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/callcon"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="50dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_height="50dp">
+                    <ImageView
+                        android:id="@+id/ivVisitMapCall"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/map_image"/>
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:id="@+id/pdivisitlist_linone"
+                >
+                <com.luminous.pdi.custom_text_view.TextViewSemiBold
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Scheduled Date:"
+                    android:textColor="#D26A89DB"
+                    android:id="@+id/tv_scheduledate"
+                    android:textSize="@dimen/_12sdp"
+                    />
+
+                <com.luminous.pdi.custom_text_view.TextViewSemiBold
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:layout_marginLeft="8dp"
+                    android:id="@+id/tv_scheduledatevalue"
+                    android:textColor="#D26A89DB"
+                    android:textSize="@dimen/_12sdp"
+                    />
+
+            </LinearLayout>
+
+            <com.luminous.pdi.custom_text_view.TextViewSemiBold
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/idivisitlist_name"
+                android:textColor="#4D4D4D"
+                android:layout_marginTop="4dp"
+                android:layout_below="@+id/pdivisitlist_linone"
+                android:textSize="@dimen/_15sdp"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="3dp"
+                android:layout_below="@+id/idivisitlist_name"
+                android:id="@+id/pdivisitlist_lintwo">
+                <com.luminous.pdi.custom_text_view.TextViewRegular
+                    android:id="@+id/txtVisitTitle1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="1dp"
+                    android:textSize="@dimen/_12sdp"
+                    android:text="Division" />
+
+                <TextView
+                    android:id="@+id/txtVisitDiv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="1dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_toRightOf="@+id/txtVisitTitle1"
+                    android:textSize="@dimen/activity_vertical_margin"
+
+                    android:text="|"/>
+
+                <com.luminous.pdi.custom_text_view.TextViewSemiBold
+                    android:id="@+id/txtVisitDivision"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:gravity="left"
+                    android:textColor="@color/colortext"
+                    android:textSize="@dimen/_12sdp"
+                    android:layout_toRightOf="@+id/txtVisitDiv"
+                    android:padding="1dp"
+                    android:text="" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_below="@+id/pdivisitlist_relone"
+            android:id="@+id/pdivisitlist_linfour"
+            >
+<!--lineone-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="3dp"
+                android:id="@+id/llHeadContractDetails"
+                android:layout_below="@+id/casedetails_linone"
+                >
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/collapse_img"
+                    />
+                <com.luminous.pdi.custom_text_view.TextViewSemiBold
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Contract Details"
+                    android:textSize="18sp"
+
+                    android:textColor="#1855AE"
+                    android:layout_marginLeft="10dp"
+                    />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginLeft="15dp"
+                    android:background="#D2E2EF"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/llContractDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="vertical"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/casedetails_lintwo"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:id="@+id/casedetails_linthree"
+                    android:layout_marginLeft="25dp"
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight="1"
+
+                        >
+
+                        <com.luminous.pdi.custom_text_view.TextViewRegular
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Contract No."
+                            android:textColor="#919191"
+                            android:textSize="15sp"
+                            android:layout_marginTop="10dp"
+
+                            />
+                        <com.luminous.pdi.custom_text_view.TextViewBold
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvContactNo"
+                            android:text="4567567569"
+                            android:id="@+id/tvContactNo"
+                            android:textColor="#797979"
+                            android:layout_marginTop="5dp"
+                            android:textSize="18sp"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+
+                        >
+
+                        <com.luminous.pdi.custom_text_view.TextViewRegular
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Credit Available"
+                            android:textColor="#919191"
+                            android:textSize="15sp"
+                            android:layout_marginTop="10dp"
+                            />
+                        <com.luminous.pdi.custom_text_view.TextViewSemiBold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2,500"
+                            android:id="@+id/tvcreditAvailable"
+
+                            android:textColor="#797979"
+                            android:layout_marginTop="5dp"
+                            android:textSize="18sp"
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="#F0F0F0"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/casedetails_viewone"
+                    android:layout_below="@+id/casedetails_linthree"
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/casedetails_viewone"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:id="@+id/casedetails_linfour"
+                    android:layout_marginLeft="25dp"
+                    >
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+
+                        >
+
+                        <com.luminous.pdi.custom_text_view.TextViewRegular
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Start Date:"
+                            android:textColor="#919191"
+                            android:textSize="15sp"
+                            android:layout_marginTop="10dp"
+
+                            />
+                        <com.luminous.pdi.custom_text_view.TextViewSemiBold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvCrstartDate"
+                            android:text="31 DEC 2019"
+                            android:id="@+id/tvCrstartDate"
+                            android:textColor="#797979"
+                            android:layout_marginTop="5dp"
+                            android:textSize="18sp"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        >
+                        <com.luminous.pdi.custom_text_view.TextViewRegular
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="End Date:"
+                            android:textColor="#919191"
+                            android:textSize="15sp"
+                            android:layout_marginTop="10dp"
+                            />
+                        <com.luminous.pdi.custom_text_view.TextViewSemiBold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvCrEndDate"
+                            android:text="20 jan 2020"
+                            android:id="@+id/tvCrEndDate"
+                            android:textColor="#797979"
+                            android:layout_marginTop="5dp"
+                            android:textSize="18sp"
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <!--linesecond-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="18dp"
+                android:layout_marginLeft="3dp"
+
+                android:id="@+id/llheadCustomerDetails"
+                android:layout_below="@+id/casedetails_linfour"
+                >
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/collapse_img"
+                    />
+                <com.luminous.pdi.custom_text_view.TextViewSemiBold
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Customer Details"
+                    android:textSize="18sp"
+                    android:textColor="#1855AE"
+                    android:layout_marginLeft="10dp"
+                    />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginLeft="15dp"
+                    android:background="#D2E2EF"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llCustomerDetails"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/casedetails_linfive"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:id="@+id/casedetails_linsix"
+                android:layout_marginLeft="25dp"
+                >
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    >
+
+                    <com.luminous.pdi.custom_text_view.TextViewRegular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Customer First Name:"
+                        android:textColor="#919191"
+                        android:textSize="15sp"
+                        android:layout_marginTop="10dp"
+                        />
+                    <com.luminous.pdi.custom_text_view.TextViewSemiBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvdate_casedetails"
+                        android:text="Arun"
+                        android:id="@+id/cuName"
+                        android:textColor="#797979"
+                        android:layout_marginTop="5dp"
+                        android:textSize="18sp"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    >
+                    <com.luminous.pdi.custom_text_view.TextViewRegular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Customer Last Name:"
+                        android:textColor="#919191"
+                        android:textSize="15sp"
+                        android:layout_marginTop="10dp"
+                        />
+                    <com.luminous.pdi.custom_text_view.TextViewSemiBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvdate_casedetails"
+                        android:text="kumar"
+                        android:id="@+id/cuLastName"
+                        android:textColor="#797979"
+                        android:layout_marginTop="5dp"
+                        android:textSize="18sp"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#F0F0F0"
+                android:layout_marginTop="10dp"
+                android:id="@+id/casedetails_viewtwo"
+                android:layout_below="@+id/casedetails_linsix"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/casedetails_linseven"
+                android:layout_marginLeft="25dp"
+                >
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <com.luminous.pdi.custom_text_view.TextViewRegular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Email id:"
+                        android:textColor="#919191"
+                        android:textSize="15sp"
+                        android:layout_marginTop="10dp"
+                        />
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvdate_casedetails"
+                        android:text="arunkumar@gmail.com"
+                        android:id="@+id/tvCuEmail"
+                        android:textColor="#797979"
+                        android:enabled="false"
+                        android:background="@color/colorWhite"
+                        android:layout_marginTop="5dp"
+                        android:textSize="18sp"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="right"
+                    android:gravity="right"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/IvCuEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+
+                        android:src="@android:drawable/ic_menu_edit">
+
+                </ImageView>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#F0F0F0"
+                android:layout_marginTop="10dp"
+                android:id="@+id/casedetails_viewthree"
+                android:layout_below="@+id/casedetails_linseven"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/casedetails_viewthree"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:id="@+id/casedetails_lineight"
+                android:layout_marginLeft="25dp"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+
+                    >
+
+                    <com.luminous.pdi.custom_text_view.TextViewRegular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Phone No."
+                        android:textColor="#919191"
+                        android:textSize="15sp"
+                        android:layout_marginTop="10dp"
+
+                        />
+                    <com.luminous.pdi.custom_text_view.TextViewSemiBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvdate_casedetails"
+                        android:text="+91 5674562190"
+                        android:id="@+id/cuPhone"
+                        android:textColor="#797979"
+                        android:layout_marginTop="5dp"
+                        android:textSize="18sp"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="right"
+                    android:gravity="right"
+                    android:layout_marginRight="3dp"
+                    android:layout_weight="1"
+
+                    >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.luminous.pdi.custom_text_view.TextViewRegular
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Alternate Phone No."
+                            android:textColor="#919191"
+                            android:textSize="15sp"
+                            android:layout_marginTop="10dp"
+                            />
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvdate_casedetails"
+                            android:text="dsdsd"
+                            android:id="@+id/tvAlterName"
+                            android:background="@color/colorWhite"
+
+                            android:enabled="false"
+                            android:textColor="#797979"
+                            android:layout_marginTop="5dp"
+                            android:textSize="18sp"
+                            />
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_gravity="right"
+                            android:gravity="top"
+                            android:layout_marginRight="5dp"
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:id="@+id/IvCuAlternateNo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@android:drawable/ic_menu_edit">
+
+                            </ImageView>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#F0F0F0"
+                android:layout_marginTop="10dp"
+                android:id="@+id/casedetails_viewfour"
+                android:layout_below="@+id/casedetails_lineight"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                  android:visibility="visible"
+                android:orientation="horizontal"
+                >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+
+                android:layout_below="@+id/casedetails_viewfour"
+                android:id="@+id/casedetails_linnine"
+                android:layout_marginLeft="25dp"
+                >
+                <com.luminous.pdi.custom_text_view.TextViewRegular
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Address:"
+                    android:textColor="#919191"
+                    android:textSize="15sp"
+                    android:layout_marginTop="10dp"
+                    />
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvdate_casedetails"
+                    android:text="A 815 1st Floor"
+                    android:id="@+id/cuAddress"
+                    android:enabled="false"
+                    android:background="@color/colorWhite"
+                    android:textColor="#797979"
+                    android:layout_marginTop="5dp"
+                    android:textSize="18sp"
+                    />
+
+            </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="right"
+                    android:gravity="top"
+                    android:layout_marginRight="8dp"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/IvcuAddress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_10_dp"
+                        android:src="@android:drawable/ic_menu_edit">
+
+                    </ImageView>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#F0F0F0"
+                android:layout_marginTop="10dp"
+                android:id="@+id/casedetails_viewfive"
+                android:layout_below="@+id/casedetails_linnine"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/casedetails_viewfive"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:visibility="visible"
+                android:id="@+id/casedetails_lineten"
+                android:layout_marginLeft="25dp"
+                >
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+
+                    >
+
+                    <com.luminous.pdi.custom_text_view.TextViewRegular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="City:"
+                        android:textColor="#919191"
+                        android:textSize="15sp"
+                        android:layout_marginTop="10dp"
+
+                        />
+                    <com.luminous.pdi.custom_text_view.TextViewSemiBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvdate_casedetails"
+                        android:text="New Delhi"
+                        android:id="@+id/cuCity"
+                        android:textColor="#797979"
+                        android:layout_marginTop="5dp"
+                        android:textSize="18sp"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    >
+                    <com.luminous.pdi.custom_text_view.TextViewRegular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="State:"
+                        android:textColor="#919191"
+                        android:textSize="15sp"
+                        android:layout_marginTop="10dp"
+                        />
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvdate_casedetails"
+                        android:text="Delhi"
+                        android:background="@color/colorWhite"
+                        android:id="@+id/cuState"
+                        android:enabled="false"
+                        android:textColor="#797979"
+                        android:layout_marginTop="5dp"
+                        android:textSize="18sp"
+                        />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="right"
+                        android:gravity="top"
+                        android:layout_marginRight="8dp"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:id="@+id/IvcuState"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@android:drawable/ic_menu_edit">
+
+                        </ImageView>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#F0F0F0"
+                android:layout_marginTop="10dp"
+                android:id="@+id/casedetails_viewsix"
+                android:layout_below="@+id/casedetails_lineten"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/casedetails_viewsix"
+                android:id="@+id/casedetails_linten"
+                android:layout_marginLeft="25dp"
+                >
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+
+                    android:orientation="vertical">
+
+                <com.luminous.pdi.custom_text_view.TextViewRegular
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pin Code:"
+                    android:textColor="#919191"
+                    android:textSize="15sp"
+                    android:layout_marginTop="10dp"
+                    />
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvdate_casedetails"
+                    android:text="110024"
+                    android:background="@color/colorWhite"
+                    android:textColor="#797979"
+                    android:id="@+id/cuPincode"
+                    android:enabled="false"
+                    android:layout_marginTop="5dp"
+                    android:textSize="18sp"
+                    />
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:src="@drawable/googlemap"
+                        android:layout_below="@+id/casedetails_linten"
+                        android:scaleType="center"
+                        android:layout_margin="@dimen/common_15_dp"
+                        android:id="@+id/casedetails_demoimage"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="right"
+                        android:gravity="top"
+                        android:layout_marginRight="8dp"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:id="@+id/IvcuPincode"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+
+                            android:src="@android:drawable/ic_menu_edit">
+
+                        </ImageView>
+                </LinearLayout>
+            </LinearLayout>
+
+            </LinearLayout>
+
+            <!--googlemap-->
+
+
+            <!--linefour-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="@dimen/_3sdp"
+                android:id="@+id/llHeadProductDetails"
+                android:layout_below="@+id/casedetails_demoimage"
+                >
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/collapse_img"
+                    />
+                <com.luminous.pdi.custom_text_view.TextViewSemiBold
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Product Details"
+                    android:textSize="18sp"
+                    android:textColor="#1855AE"
+                    android:layout_marginLeft="10dp"
+                    />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginLeft="15dp"
+                    android:background="#D2E2EF"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llProductDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="vertical">
+                <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/casedetails_lintwelv"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:id="@+id/casedetails_linethir"
+                android:layout_marginLeft="25dp"
+                >
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+
+                    >
+
+                    <com.luminous.pdi.custom_text_view.TextViewRegular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Product Type:"
+                        android:textColor="#919191"
+                        android:textSize="15sp"
+                        android:layout_marginTop="10dp"
+
+                        />
+                    <com.luminous.pdi.custom_text_view.TextViewSemiBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvdate_casedetails"
+                        android:text="Phone"
+                        android:id="@+id/productType"
+                        android:textColor="#797979"
+                        android:layout_marginTop="5dp"
+                        android:textSize="18sp"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    >
+                    <com.luminous.pdi.custom_text_view.TextViewRegular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Make/Brand:"
+                        android:textColor="#919191"
+                        android:textSize="15sp"
+                        android:layout_marginTop="10dp"
+                        />
+                    <com.luminous.pdi.custom_text_view.TextViewSemiBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvdate_casedetails"
+                        android:text="iPhone"
+                        android:id="@+id/Prbrand"
+                        android:textColor="#797979"
+                        android:layout_marginTop="5dp"
+                        android:textSize="18sp"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#F0F0F0"
+                android:layout_marginTop="10dp"
+                android:id="@+id/casedetails_viewseven"
+                android:layout_below="@+id/casedetails_linethir"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:id="@+id/casedetailsModelLine"
+                android:layout_below="@+id/casedetails_viewseven"
+                android:layout_marginLeft="25dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    >
+                    <com.luminous.pdi.custom_text_view.TextViewRegular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Model:"
+                        android:textColor="#919191"
+                        android:textSize="15sp"
+                        android:layout_marginTop="10dp"
+                        />
+                    <com.luminous.pdi.custom_text_view.TextViewSemiBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Roshan Kumar"
+                        android:id="@+id/prModel"
+                        android:textColor="#797979"
+                        android:layout_marginTop="5dp"
+                        android:textSize="18sp"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:layout_gravity="start"
+                    >
+                    <com.luminous.pdi.custom_text_view.TextViewRegular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Serial No:"
+                        android:textColor="#919191"
+                        android:textSize="15sp"
+                        android:layout_marginTop="10dp"
+                        />
+                    <com.luminous.pdi.custom_text_view.TextViewSemiBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2500"
+                        android:id="@+id/prtvSerialNO"
+                        android:textColor="#797979"
+                        android:layout_marginTop="5dp"
+                        android:textSize="18sp"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#F0F0F0"
+                android:layout_marginTop="10dp"
+                android:id="@+id/casedetails"
+                android:layout_below="@+id/casedetails_linfourt"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:id="@+id/casedetailsNameLine"
+                android:layout_below="@+id/casedetails_viewseven"
+                android:layout_marginLeft="25dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    >
+                    <com.luminous.pdi.custom_text_view.TextViewRegular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Name:"
+                        android:textColor="#919191"
+                        android:textSize="15sp"
+                        android:layout_marginTop="10dp"
+                        />
+                    <com.luminous.pdi.custom_text_view.TextViewSemiBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Roshan Kumar"
+                        android:textColor="#797979"
+                        android:id="@+id/prName"
+                        android:layout_marginTop="5dp"
+                        android:textSize="18sp"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:layout_gravity="start"
+                    >
+                    <com.luminous.pdi.custom_text_view.TextViewRegular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Price:"
+                        android:textColor="#919191"
+                        android:textSize="15sp"
+                        android:layout_marginTop="10dp"
+                        />
+                    <com.luminous.pdi.custom_text_view.TextViewSemiBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2500"
+                        android:textColor="#797979"
+                        android:id="@+id/prPrice"
+                        android:layout_marginTop="5dp"
+                        android:textSize="18sp"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#F0F0F0"
+                android:layout_marginTop="10dp"
+                android:id="@+id/casedetails_vieweight"
+                android:layout_below="@+id/casedetails_linfourt"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/casedetails_vieweight"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:id="@+id/casedetails_linfift"
+                android:layout_marginLeft="25dp"
+                >
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+
+                    >
+
+                    <com.luminous.pdi.custom_text_view.TextViewRegular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Properties:"
+                        android:textColor="#919191"
+                        android:textSize="15sp"
+                        android:layout_marginTop="10dp"
+
+                        />
+                    <com.luminous.pdi.custom_text_view.TextViewSemiBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvdate_casedetails"
+                        android:text="Lorem Lipsum"
+                        android:id="@+id/prProperties"
+                        android:textColor="#797979"
+                        android:layout_marginTop="5dp"
+                        android:textSize="18sp"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    >
+                    <com.luminous.pdi.custom_text_view.TextViewRegular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Purchase Date:"
+                        android:textColor="#919191"
+                        android:textSize="15sp"
+                        android:layout_marginTop="10dp"
+                        />
+                    <com.luminous.pdi.custom_text_view.TextViewSemiBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="31 Dec 2018"
+                        android:id="@+id/prPurchaseDate"
+                        android:textColor="#797979"
+                        android:layout_marginTop="5dp"
+                        android:textSize="18sp"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#F0F0F0"
+                android:layout_marginTop="10dp"
+                android:id="@+id/casedetails_viewten"
+                android:layout_below="@+id/casedetails_linfift"
+                />
+            </LinearLayout>
+
+            <!--linefive-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="@dimen/_3sdp"
+
+                android:id="@+id/llHeadRepairSum"
+                android:layout_below="@+id/casedetails_viewten"
+                >
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/collapse_img"
+                    />
+                <com.luminous.pdi.custom_text_view.TextViewSemiBold
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Repair Summary"
+                    android:textSize="18sp"
+                    android:textColor="#1855AE"
+                    android:layout_marginLeft="10dp"
+                    />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginLeft="15dp"
+                    android:background="#D2E2EF"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llRepair"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_below="@+id/casedetails_linseveteen"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/cashdetails_horiconview"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:showDividers="middle"
+                    android:divider="@drawable/linearitem_border"
+
+                    android:orientation="horizontal"
+                    android:id="@+id/casedetails_lineighteen"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:text="Assigned Enginner"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Visite Scheduled"
+                        android:textColor="#000000"
+
+
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+
+                        android:text="Actual Visit Date"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Assigned Enginner"
+                        android:textColor="#000000"
+
+
+                        />
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:id="@+id/rv_casdetails"
+                android:layout_below="@+id/cashdetails_horiconview"
+                />
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+
+
+
+    </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_anchorGravity="bottom|right|end"
+        android:clickable="true"
+        app:borderWidth="0dp"
+        android:elevation="4dp"
+        android:backgroundTint="#3F9134"
+        android:src="@drawable/ic_plusbtn"
+        android:id="@+id/visitfloatbtn"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginRight="20dp"
+        />
+</RelativeLayout>
+</layout>

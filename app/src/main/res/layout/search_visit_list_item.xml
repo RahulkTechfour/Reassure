@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:elevation="10dp"
+            app:cardCornerRadius="@dimen/_10sdp">
+            <LinearLayout
+                android:id="@+id/linSearchGredient"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/button_bg_orange_rounded_corners">
+
+                <com.luminous.pdi.custom_text_view.TextViewSemiBold
+                    android:id="@+id/txtSearchMaterialName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/common_5_dp"
+                    android:padding="1dp"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:text="Rojana Bajaar"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/_15sdp"
+                    />
+                <com.luminous.pdi.custom_text_view.TextViewSemiBold
+                    android:id="@+id/txtSearchSerialNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="1dp"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:layout_below="@+id/txtCompName"
+                    android:textSize="@dimen/_15sdp"
+                    android:textColor="@color/colorWhite"
+                    android:text="Division" />
+
+
+
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:layout_margin="@dimen/_5sdp">
+
+                        <com.luminous.pdi.custom_text_view.TextViewRegular
+                            android:id="@+id/txtSearchFault"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="1dp"
+                            android:textSize="@dimen/_12sdp"
+                            android:textColor="@color/colorWhite"
+                            android:text="Fault Detail" />
+                        <com.luminous.pdi.custom_text_view.TextViewSemiBold
+                            android:id="@+id/txtSearchFaultName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="1dp"
+                            android:text="Rojana Bajaar"
+                            android:layout_below="@+id/txtSearchFault"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_12sdp"
+                            />
+
+
+
+
+
+                        <com.luminous.pdi.custom_text_view.TextViewRegular
+                            android:id="@+id/txtSearchInspection"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="1dp"
+                            android:layout_below="@+id/txtSearchFaultName"
+                            android:textSize="@dimen/_12sdp"
+                            android:textColor="@color/colorWhite"
+                            android:text="Inspection Date" />
+
+                        <com.luminous.pdi.custom_text_view.TextViewSemiBold
+                            android:id="@+id/txtSearchInspectionValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="1dp"
+                            android:layout_below="@+id/txtSearchInspection"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_12sdp"
+                            android:text="21jan2020"/>
+
+                        <com.luminous.pdi.custom_text_view.TextViewRegular
+                            android:id="@+id/txtSearchWarranty"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:layout_below="@+id/txtSearchInspectionValue"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_12sdp"
+                            android:padding="1dp"
+                            android:text="Warranty Status"/>
+
+                        <com.luminous.pdi.custom_text_view.TextViewSemiBold
+                            android:id="@+id/txtSearchWarrantyValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:layout_below="@+id/txtSearchWarranty"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_12sdp"
+                            android:padding="1dp"
+                            android:text="In Warranty" />
+
+
+                        <com.luminous.pdi.custom_text_view.TextViewRegular
+                            android:id="@+id/txtMfgDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:layout_below="@+id/txtSearchWarrantyValue"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_12sdp"
+                            android:padding="1dp"
+                            android:text="MFG Date"/>
+
+                        <com.luminous.pdi.custom_text_view.TextViewSemiBold
+                            android:id="@+id/txtMFGValues"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:layout_below="@+id/txtMfgDate"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_12sdp"
+                            android:padding="1dp"
+                            android:text="Date" />
+
+
+                        <com.luminous.pdi.custom_text_view.TextViewRegular
+                            android:id="@+id/txtBatch"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:layout_below="@+id/txtMFGValues"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_12sdp"
+                            android:padding="1dp"
+                            android:text="Batch No."/>
+
+                        <com.luminous.pdi.custom_text_view.TextViewSemiBold
+                            android:id="@+id/txtBatchValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:layout_below="@+id/txtBatch"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_12sdp"
+                            android:padding="1dp"
+                            android:text="Batch No" />
+
+                        <com.luminous.pdi.custom_text_view.TextViewSemiBold
+                            android:id="@+id/txtFaultAccept"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:layout_below="@+id/txtBatchValue"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_12sdp"
+                            android:padding="1dp"
+                            android:text="Fault Accept" />
+                        <com.luminous.pdi.custom_text_view.TextViewSemiBold
+                            android:id="@+id/txtFaultAcceptValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:layout_below="@+id/txtFaultAccept"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_12sdp"
+                            android:padding="1dp"
+                            android:text="Fault Accept value" />
+
+                        <com.luminous.pdi.custom_text_view.TextViewSemiBold
+                            android:id="@+id/txtInvoiceFanValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:layout_below="@+id/txtFaultAcceptValue"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_12sdp"
+                            android:padding="1dp"
+                            android:visibility="gone"
+                            android:text="Fault Accept value" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginTop="7dp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:layout_weight="1.0"
+                        android:gravity="right"
+                        android:orientation="vertical">
+
+                        <com.luminous.pdi.custom_text_view.TextViewRegular
+                            android:id="@+id/txtSearchProdStatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:padding="1dp"
+                            android:text="Product Status"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <com.luminous.pdi.custom_text_view.TextViewSemiBold
+                            android:id="@+id/txtSearchProdStatusValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/txtSearchProdStatus"
+                            android:gravity="left"
+                            android:padding="1dp"
+                            android:text="Completed"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_12sdp" />
+
+
+                        <com.luminous.pdi.custom_text_view.TextViewRegular
+                            android:id="@+id/txtSearchDOP"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/txtSearchProdStatusValue"
+                            android:gravity="left"
+                            android:padding="1dp"
+                            android:text="Date of purchase"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <com.luminous.pdi.custom_text_view.TextViewSemiBold
+                            android:id="@+id/txtSearchDOPValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/txtSearchDOP"
+                            android:gravity="left"
+                            android:padding="1dp"
+                            android:text="21jan2020"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_12sdp" />
+
+
+                        <com.luminous.pdi.custom_text_view.TextViewRegular
+                            android:id="@+id/txtSearchClaimStatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/txtSearchDOPValue"
+                            android:gravity="left"
+                            android:padding="1dp"
+                            android:text="Claim of Status"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_12sdp"
+                            android:visibility="visible" />
+
+                        <com.luminous.pdi.custom_text_view.TextViewSemiBold
+                            android:id="@+id/txtSearchClaimStatusValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/txtSearchClaimStatus"
+                            android:gravity="left"
+                            android:padding="1dp"
+                            android:text="21jan2020"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_12sdp"
+                            android:visibility="visible" />
+
+                        <com.luminous.pdi.custom_text_view.TextViewRegular
+                            android:id="@+id/txtQuantity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/txtSearchClaimStatusValue"
+                            android:gravity="left"
+                            android:padding="1dp"
+                            android:text="Qty"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <com.luminous.pdi.custom_text_view.TextViewSemiBold
+                            android:id="@+id/txtSearchQtyValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/txtQuantity"
+                            android:gravity="left"
+                            android:padding="1dp"
+                            android:text="21jan2020"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <com.luminous.pdi.custom_text_view.TextViewRegular
+                            android:id="@+id/txtInvoiceID"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/txtSearchQtyValue"
+                            android:gravity="left"
+
+                            android:padding="1dp"
+                            android:text="Invoice No."
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <com.luminous.pdi.custom_text_view.TextViewSemiBold
+                            android:id="@+id/txtInvoiceValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/txtInvoiceID"
+                            android:gravity="left"
+                            android:padding="1dp"
+                            android:text="Invoice Value"
+
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_12sdp" />
+
+
+                        <com.luminous.pdi.custom_text_view.TextViewSemiBold
+                            android:id="@+id/txtFaultReject"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/txtInvoiceValue"
+                            android:gravity="left"
+                            android:padding="1dp"
+                            android:text="Fault Reject"
+
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <com.luminous.pdi.custom_text_view.TextViewSemiBold
+                            android:id="@+id/txtFaultRejectValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/txtFaultReject"
+                            android:gravity="left"
+                            android:padding="1dp"
+                            android:text="Fault Reject"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_12sdp" />
+                        <com.luminous.pdi.custom_text_view.TextViewSemiBold
+                            android:id="@+id/txtFaultQuan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/txtFaultRejectValue"
+                            android:gravity="left"
+                            android:padding="1dp"
+                            android:text="Fault Quantity"
+
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <com.luminous.pdi.custom_text_view.TextViewSemiBold
+                            android:id="@+id/txtFaultQuanValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/txtFaultQuan"
+                            android:gravity="left"
+                            android:padding="1dp"
+                            android:text="Fault Reject"
+
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_12sdp" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</layout>

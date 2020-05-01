@@ -1,0 +1,4 @@
+include ':app'
+rootProject.name='PDI'
+include ':PDI', ':library'
+

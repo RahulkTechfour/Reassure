@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:id="@+id/addproductvisitlist_toolbar"
+            android:background="#2A50CB"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_backarrow"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true"
+                    android:id="@+id/addproductvisitlist_backimage"
+
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PDI Visit Details"
+                    android:layout_centerInParent="true"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/_20sdp"
+                    />
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+
+        <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/layout_border"
+            android:layout_below="@+id/addproductvisitlist_toolbar"
+            >
+
+        <RelativeLayout
+            android:id="@+id/rel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp">
+
+
+            <LinearLayout
+                android:id="@+id/pdivisitlist_linone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <com.luminous.pdi.custom_text_view.TextViewSemiBold
+                    android:id="@+id/tv_addscheduledate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Scheduled Date:"
+                    android:textColor="#D26A89DB"
+                    android:textSize="@dimen/_12sdp" />
+
+                <com.luminous.pdi.custom_text_view.TextViewSemiBold
+                    android:id="@+id/tv_addscheduledatevalue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:text="21 Jan 2020"
+                    android:textColor="#D26A89DB"
+                    android:textSize="@dimen/_12sdp" />
+
+
+            </LinearLayout>
+
+            <com.luminous.pdi.custom_text_view.TextViewSemiBold
+                android:id="@+id/tv_addvisitlist_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pdivisitlist_linone"
+                android:layout_marginTop="4dp"
+                android:text="Rojana Bazaar"
+                android:textColor="#4D4D4D"
+                android:textSize="@dimen/_15sdp" />
+
+            <LinearLayout
+                android:id="@+id/visitlist_lintwo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_addvisitlist_name"
+
+                android:layout_marginTop="3dp"
+                android:orientation="horizontal">
+
+                <com.luminous.pdi.custom_text_view.TextViewRegular
+                    android:id="@+id/txtVisitTitle1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="1dp"
+                    android:text="Division"
+                    android:textSize="@dimen/_12sdp" />
+
+                <TextView
+                    android:id="@+id/txtVisitDiv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@+id/txtVisitTitle1"
+                    android:padding="1dp"
+                    android:text=":"
+
+                    android:textSize="@dimen/activity_vertical_margin" />
+
+                <com.luminous.pdi.custom_text_view.TextViewSemiBold
+                    android:id="@+id/txtAddVisitDivision"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@+id/txtVisitDiv"
+                    android:gravity="left"
+                    android:padding="1dp"
+                    android:text="Fan"
+                    android:textColor="@color/colortext"
+                    android:textSize="@dimen/_12sdp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/visitlist_linthree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/visitlist_lintwo"
+                android:orientation="horizontal">
+
+                <com.luminous.pdi.custom_text_view.TextViewRegular
+                    android:id="@+id/txtSubject"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="1dp"
+                    android:text="Status"
+                    android:textSize="@dimen/_12sdp" />
+
+
+                <TextView
+                    android:id="@+id/txtcolon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="32dp"
+                    android:layout_toRightOf="@+id/txtSubject"
+                    android:padding="1dp"
+                    android:text=":"
+                    android:textSize="@dimen/activity_vertical_margin" />
+
+
+                <com.luminous.pdi.custom_text_view.TextViewSemiBold
+                    android:id="@+id/txtAddVisitStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/txtcolon"
+                    android:gravity="left"
+                    android:padding="1dp"
+                    android:text="  Pending"
+                    android:textColor="@color/color_yellow"
+                    android:textSize="@dimen/_12sdp" />
+            </LinearLayout>
+
+            <com.luminous.pdi.custom_text_view.TextViewRegular
+                android:id="@+id/tv_addvisitaddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/visitlist_linthree"
+                android:layout_marginTop="7dp"
+                android:text="A 815,khanpur,New Delhi-110080"
+                android:textSize="@dimen/_12sdp" />
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/txt_divider"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@+id/rel"
+            android:layout_marginTop="10dp"
+            android:background="@color/Light_gray" />
+
+
+        <com.luminous.pdi.custom_text_view.TextViewRegular
+            android:id="@+id/tvQuantity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Quantity:"
+            android:paddingLeft="20dp"
+            android:textColor="@drawable/color_quan"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_below="@+id/txt_divider"
+            android:textSize="@dimen/_12sdp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/tvQuantity"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/_17sdp"
+            android:layout_marginRight="@dimen/_17sdp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <EditText
+                android:id="@+id/et_AddQnty"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/editHeightSize"
+                android:layout_weight="1"
+                android:background="@drawable/rectangular_view"
+                android:gravity="center"
+                android:hint="Add Quantity"
+                android:inputType="number"
+                android:paddingLeft="@dimen/_10sdp"
+                android:textSize="@dimen/_12sdp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btn_addProduct"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_weight="1"
+                android:background="@drawable/add_button_bg_corner"
+                android:text="ADD PRODUCT"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/_13sdp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    </RelativeLayout>
+</layout>

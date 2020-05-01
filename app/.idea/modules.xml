@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../PDI.iml" filepath="$PROJECT_DIR$/../PDI.iml" group="PDI" />
+      <module fileurl="file://$PROJECT_DIR$/../PDI/PDI-PDI.iml" filepath="$PROJECT_DIR$/../PDI/PDI-PDI.iml" group="PDI/PDI" />
+      <module fileurl="file://$PROJECT_DIR$/app.iml" filepath="$PROJECT_DIR$/app.iml" group="PDI/app" />
+      <module fileurl="file://$PROJECT_DIR$/../library/library.iml" filepath="$PROJECT_DIR$/../library/library.iml" group="PDI/library" />
+    </modules>
+  </component>
+</project>

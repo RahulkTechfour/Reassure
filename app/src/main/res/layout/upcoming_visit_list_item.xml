@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:id="@+id/linUpcomingVisit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <com.luminous.pdi.custom_text_view.TextViewSemiBold
+                android:id="@+id/txtVisitDate"
+                android:visibility="visible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:textColor="@color/colortext"
+                android:textSize="@dimen/_12sdp"
+                android:padding="1dp"
+                android:text=""
+                />
+
+            <com.luminous.pdi.custom_text_view.TextViewSemiBold
+                android:id="@+id/txtName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="1dp"
+                android:text=""
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_12sdp" />
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.luminous.pdi.custom_text_view.TextViewRegular
+                    android:id="@+id/txtRequestNO"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="1dp"
+                    android:textSize="@dimen/_12sdp"
+                    android:text="Request No"/>
+
+
+                <TextView
+                    android:id="@+id/txtcolonRestNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="1dp"
+                    android:layout_marginLeft="8dp"
+
+                    android:layout_toRightOf="@+id/txtRequestNO"
+                    android:textSize="@dimen/_12sdp"
+
+                    android:text="|"/>
+
+
+                <com.luminous.pdi.custom_text_view.TextViewSemiBold
+                    android:id="@+id/txtVisitRequestNO"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/txtcolonRestNo"
+                    android:padding="1dp"
+                    android:gravity="left"
+                    android:layout_marginLeft="3dp"
+
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="@color/color_yellow"
+                    android:text="" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <com.luminous.pdi.custom_text_view.TextViewRegular
+                    android:id="@+id/txtVisitTitle1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="1dp"
+                    android:textSize="@dimen/_12sdp"
+                    android:text="Division" />
+
+                <TextView
+                    android:id="@+id/txtVisitDiv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="1dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_toRightOf="@+id/txtVisitTitle1"
+                    android:textSize="@dimen/_12sdp"
+
+                    android:text=":"/>
+
+                <com.luminous.pdi.custom_text_view.TextViewSemiBold
+                    android:id="@+id/txtVisitDivision"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="left"
+                    android:textColor="@color/colortext"
+                    android:textSize="@dimen/_12sdp"
+                    android:layout_toRightOf="@+id/txtVisitDiv"
+                    android:padding="1dp"
+                    android:text="" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <com.luminous.pdi.custom_text_view.TextViewRegular
+                    android:id="@+id/txtSubject"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="1dp"
+                    android:textSize="@dimen/_12sdp"
+                    android:text="Status"/>
+
+
+                <TextView
+                    android:id="@+id/txtcolon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="1dp"
+                    android:layout_marginLeft="42dp"
+                    android:layout_toRightOf="@+id/txtSubject"
+                    android:textSize="@dimen/_12sdp"
+
+                    android:text=":"/>
+
+
+                <com.luminous.pdi.custom_text_view.TextViewSemiBold
+                    android:id="@+id/txtVisitStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/txtcolon"
+                    android:padding="1dp"
+                    android:gravity="left"
+                    android:layout_marginLeft="19dp"
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="@color/color_yellow"
+                    android:text="" />
+            </RelativeLayout>
+
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal"
+            >
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:background="@drawable/oval_view"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/ivVisitStatusCall"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/callcon"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="50dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginLeft="5dp"
+                android:layout_height="50dp">
+                <ImageView
+                    android:id="@+id/ivVisitMapCall"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/map_image"/>
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:background="#eeeeee"
+        android:padding="1dp"/>
+
+</LinearLayout>
+</layout>

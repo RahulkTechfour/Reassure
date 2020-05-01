@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#314ccf</color>
+    <color name="colorPrimaryDark">#314ccf</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="black_overlay">#66000000</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colordivider">#eaeaea</color>
+    <color name="colortext">#2b3f82</color>
+    <color name="nav_bottom_color_selected">#213886</color>
+    <color name="nav_bottom_color_unselected">#a1a1a1</color>
+    <color name="color_yellow">#e3ad52</color>
+    <color name="colorGreen">#3ab449</color>
+    <color name="colorToolbar">#314ccf</color>
+    <color name="previous">#fee1a7</color>
+    <color name="submit">#1b3db1</color>
+    <color name="next">#429422</color>
+    <color name="upcomingVisit">#a9adbe</color>
+    <color name="Light_gray">#f0f0f0</color>
+    <color name="color_enterman">#1f3996</color>
+    <color name="light_gray">#80C0C0C0</color>
+
+    <color name="color_Calendercircle">#ec702b</color>
+    <color name="blue_circle_calendar">@color/colorPrimaryDark</color>
+
+    <color name="color_cal_heading">#5a6aaf</color>
+    <color name="color_blue">#508ed7</color>
+    <color name="calendar_month_text">#757575</color>
+
+    <color name="color_black">#4b4b4b</color>
+
+</resources>

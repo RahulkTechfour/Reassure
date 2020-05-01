@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite">
+
+        <com.luminous.pdi.calendar.CustomCalendar
+            android:id="@+id/customCalendar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:endMonth="07"
+            app:endYear="2016"
+            app:startMonth="01"
+            app:startYear="2016" />
+
+<!--        <androidx.cardview.widget.CardView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="@drawable/calender_view_rect"-->
+<!--            android:layout_margin="10dp"-->
+<!--            android:layout_marginLeft="20dp"-->
+<!--            android:layout_marginRight="20dp"-->
+<!--            app:cardElevation="25dp"-->
+<!--            app:cardCornerRadius="20dp">-->
+
+
+
+<!--            <androidx.recyclerview.widget.RecyclerView-->
+<!--                android:id="@+id/rvCalendar"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:visibility="visible" />-->
+<!--        </androidx.cardview.widget.CardView>-->
+
+    </RelativeLayout>
+</layout>

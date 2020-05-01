@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/layout_border"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:id="@+id/pdivisitlist_relonesearchproduct"
+                >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/pdivisitlist_linonesearchproduct"
+                    >
+                    <com.luminous.pdi.custom_text_view.TextViewSemiBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Scheduled Date:"
+                        android:textColor="#D26A89DB"
+                        android:id="@+id/tv_scheduledatesearchproduct"
+                        android:textSize="@dimen/_12sdp"
+                        />
+
+                    <com.luminous.pdi.custom_text_view.TextViewSemiBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="21 Jan 2020"
+                        android:layout_marginLeft="8dp"
+                        android:id="@+id/tv_scheduledatevaluesearchproduct"
+                        android:textColor="#D26A89DB"
+                        android:textSize="@dimen/_12sdp"
+                        />
+
+                </LinearLayout>
+
+                <com.luminous.pdi.custom_text_view.TextViewSemiBold
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Rojana Bazaar"
+                    android:id="@+id/idivisitlist_namesearchproduct"
+                    android:textColor="#4D4D4D"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@+id/pdivisitlist_linonesearchproduct"
+                    android:textSize="14sp"
+                    />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_below="@+id/idivisitlist_namesearchproduct"
+                    android:id="@+id/pdivisitlist_lintwosearchproduct"
+                    >
+                    <com.luminous.pdi.custom_text_view.TextViewRegular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Division         :"
+                        android:textColor="#DA918E8E"
+                        android:id="@+id/tv_divisionsearchproduct"
+                        android:textSize="@dimen/_12sdp"
+                        />
+                    <com.luminous.pdi.custom_text_view.TextViewSemiBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Fan"
+                        android:id="@+id/tv_divisionvaluesearchproduct"
+                        android:layout_marginLeft="8dp"
+                        android:textColor="#6A89DB"
+                        android:textSize="@dimen/_12sdp"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="3dp"
+                    android:layout_below="@+id/pdivisitlist_lintwosearchproduct"
+                    android:id="@+id/pdivisitlist_linthreesearchproduct"
+                    >
+                    <com.luminous.pdi.custom_text_view.TextViewRegular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Status            :"
+                        android:textColor="#D8918E8E"
+                        android:id="@+id/tv_statussearchproduct"
+                        android:textSize="@dimen/_12sdp"
+                        />
+                    <com.luminous.pdi.custom_text_view.TextViewSemiBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pending"
+                        android:id="@+id/tv_statusvaluesearchproduct"
+                        android:layout_marginLeft="8dp"
+                        android:textColor="#EDDFB66F"
+                        android:textSize="@dimen/_12sdp"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="3dp"
+                    android:layout_below="@+id/pdivisitlist_linthreesearchproduct"
+                    android:id="@+id/pdivisitlist_Request"
+                    >
+                    <com.luminous.pdi.custom_text_view.TextViewRegular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Request No   :"
+                        android:textColor="#D8918E8E"
+                        android:id="@+id/tv_statussearchRequest"
+                        android:textSize="@dimen/_12sdp"
+                        />
+                    <com.luminous.pdi.custom_text_view.TextViewSemiBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pending"
+                        android:id="@+id/tv_statusvaluesearchRequest"
+                        android:layout_marginLeft="8dp"
+                        android:textColor="#EDDFB66F"
+                        android:textSize="@dimen/_12sdp"
+                        />
+                </LinearLayout>
+
+
+                <com.luminous.pdi.custom_text_view.TextViewRegular
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_below="@+id/pdivisitlist_Request"
+                    android:text="A 815,khanpur,New Delhi-110080"
+                    android:id="@+id/tv_SearchAddress"
+                    android:textSize="@dimen/_12sdp"
+                    />
+
+
+
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:drawableRight="@drawable/ic_search"
+                    android:layout_below="@+id/tv_SearchAddress"
+                    android:text="Search"
+                   android:gravity="center"
+                    android:textColor="@color/colorWhite"
+                    android:padding="10dp"
+                    android:focusable="false"
+                    android:editable="false"
+                    android:clickable="false"
+                    android:layout_marginTop="25dp"
+                    android:id="@+id/btnSearchProduct"
+                    android:background="@drawable/button_bg_blue_round_corner"
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible"
+                    android:layout_below="@+id/btnSearchProduct"
+                    android:id="@+id/lin_search_content">
+
+                <com.luminous.pdi.custom_text_view.TextViewRegular
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Search by Serial No."
+                    android:layout_marginTop="23dp"
+                    android:id="@+id/tv_searchbyserialno"
+                    android:textSize="18sp"
+                    />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:id="@+id/etSearchSerialNo"
+                    android:padding="10dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/my_edit_text_border"
+                    android:layout_below="@+id/tv_searchbyserialno"
+                    android:hint="Enter Serial No."
+                    />
+                <com.luminous.pdi.custom_text_view.TextViewRegular
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="OR"
+                    android:textSize="18sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/etSearchSerialNo"
+                    android:textAlignment="center"
+                    android:id="@+id/tv_orproductlist"
+                    />
+                <com.luminous.pdi.custom_text_view.TextViewRegular
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Search By Material Name "
+                    android:layout_below="@+id/tv_orproductlist"
+                    android:textSize="18sp"
+                    android:id="@+id/tv_searchbymaterialno"
+                    />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/my_edit_text_border"
+                    android:layout_below="@+id/tv_searchbymaterialno"
+                    android:id="@+id/etSearchMaterialNo"
+                    android:layout_marginTop="5dp"
+                    android:hint="Enter Material Name"
+                    android:padding="10dp"
+                    />
+
+                <com.luminous.pdi.custom_text_view.TextViewRegular
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="OR"
+                    android:textSize="18sp"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/tv_orsecond"
+                    android:layout_below="@+id/etSearchMaterialNo"
+                    android:textAlignment="center"
+                    />
+                <com.luminous.pdi.custom_text_view.TextViewRegular
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Claim Status"
+                    android:textSize="18sp"
+                    android:id="@+id/tv_claimstatus"
+                    android:layout_below="@+id/tv_orsecond"
+                    />
+                <RadioGroup
+                    android:id="@+id/rgSearchClaimStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_below="@+id/tv_claimstatus"
+                    >
+
+                    <RadioButton
+                        android:id="@+id/rdAccepted"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Accepted"
+                        android:textSize="18dp"/>
+
+                    <RadioButton
+                        android:id="@+id/rdRejected"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18dp"
+                        android:text="Rejected" />
+
+                </RadioGroup>
+
+                <com.luminous.pdi.custom_text_view.TextViewRegular
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="OR"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/tv_orthird"
+                    android:textSize="18sp"
+                    android:textAlignment="center"
+                    android:layout_below="@+id/rgSearchClaimStatus"
+                    />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Show All"
+                    android:textSize="18sp"
+                    android:id="@+id/rdSearchShowAll"
+                    android:layout_below="@+id/tv_orthird"
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/rdSearchShowAll"
+                    >
+                    <Button
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:text="Search"
+                        android:textSize="18dp"
+                        android:textColor="#FFFFFF"
+                        android:id="@+id/btn_search"
+                        android:background="@drawable/button_bg_green_round"
+                        />
+                    <com.luminous.pdi.custom_text_view.TextViewRegular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Reset"
+                        android:textColor="#7083B9"
+                        android:layout_marginLeft="25dp"
+                        android:textSize="20sp"
+                        android:id="@+id/tvSearchReset"
+                        />
+                </LinearLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lin_search_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@drawable/layout_border">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/search_recycler_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_50sdp"
+                        android:nestedScrollingEnabled="false"
+                        android:descendantFocusability="blocksDescendants" />
+
+                    <ProgressBar
+                        android:id="@+id/pbSearchLoading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:visibility="gone"/>
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+</layout>

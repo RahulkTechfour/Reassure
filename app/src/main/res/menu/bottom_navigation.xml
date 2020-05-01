@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<!--    <item-->
+<!--        android:id="@+id/nav_dash"-->
+<!--        android:icon="@drawable/callcon"-->
+<!--        android:title="@string/dash" />-->
+
+<!--    <item-->
+<!--        android:id="@+id/nav_pending"-->
+<!--        android:icon="@drawable/b_pending"-->
+<!--        android:title="@string/pend" />-->
+
+<!--    <item-->
+<!--        android:id="@+id/nav_draft"-->
+<!--        android:icon="@drawable/b_draft"-->
+<!--        android:title="@string/draft" />-->
+
+<!--    <item-->
+<!--        android:id="@+id/nav_completed"-->
+<!--        android:icon="@drawable/b_completed"-->
+<!--        android:title="@string/comp" />-->
+</menu>

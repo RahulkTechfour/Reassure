@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/casedetails_border"
+    tools:context=".RemarkFragment.RemarkFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:id="@+id/casedetails_remarktool"
+        android:layout_height="80dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/backarrow"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Case Details"
+                android:textColor="#ffffff"
+                android:layout_centerInParent="true"
+                android:textSize="23sp"
+                />
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/calendar_img"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="15dp"
+                android:layout_centerVertical="true"
+                />
+
+        </RelativeLayout>
+
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/casedetails_relone"
+        android:layout_below="@+id/casedetails_remarktool"
+        android:background="@drawable/casedetails_layoutborder"
+        >
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="22dp"
+                    android:id="@+id/casedetails_remarklinone"
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:orientation="vertical"
+                        android:background="@drawable/linearlayout_border"
+                        >
+                        <Spinner
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:orientation="vertical"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/linearlayout_border"
+                        >
+                        <Spinner
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:orientation="vertical"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/linearlayout_border"
+                        >
+                        <Spinner
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:orientation="vertical"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/linearlayout_border"
+                        >
+                        <Spinner
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="160dp"
+                        android:orientation="vertical"
+                        android:background="@drawable/linearlayout_border"
+                        android:layout_marginTop="20dp"
+                        >
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#00000000"
+                            android:hint="Enter Remarks"
+                            android:gravity="top|left"
+                            android:padding="10dp"
+                            android:inputType="text"
+                            />
+                    </LinearLayout>
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="#F6F6F6"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/casedetails_remarkviewone"
+                    android:layout_below="@+id/casedetails_remarklinone"
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="22dp"
+                    android:id="@+id/casedetails_remarklintwo"
+                    android:layout_below="@+id/casedetails_remarkviewone"
+                    >
+
+                    <com.luminous.pdi.custom_text_view.TextViewBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Upload Files:"
+                        android:textSize="18sp"
+                        />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="#F6F6F6"
+                        android:layout_marginTop="5dp"
+                        />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp"
+                        >
+
+
+                        <com.luminous.pdi.custom_text_view.TextViewRegular
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Purchase Invoice"
+                            android:id="@+id/tv_purchaseincoice"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="*"
+                            android:textColor="#EBB9C5"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="20dp"
+                        >
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="120dp"
+                            android:src="@drawable/download"
+                            android:scaleType="centerCrop"
+                            android:background="@drawable/linearlayout_border"
+                            />
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="120dp"
+                            android:layout_marginLeft="20dp"
+                            android:src="@drawable/imageupload"
+                            android:scaleType="center"
+                            android:id="@+id/imgupload"
+                            android:background="@drawable/linearlayout_border"
+                            />
+                    </LinearLayout>
+                    <Button
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:text="Next"
+                        android:textColor="#ffffff"
+                        android:id="@+id/btn_next"
+                        android:layout_marginTop="30dp"
+                        android:background="@drawable/nextbtn_border"
+                        android:textAllCaps="false"
+                        />
+
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="#F6F6F6"
+                    android:layout_marginTop="15dp"
+                    android:layout_below="@+id/casedetails_remarklintwo"
+                    android:id="@+id/casedetails_remarkviewtwo"
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="22dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/casedetails_remarkviewtwo"
+                    >
+                    <com.luminous.pdi.custom_text_view.TextViewRegular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Is Repair Completed?"
+                        android:id="@+id/tv_isrepait"
+                        />
+                    <androidx.appcompat.widget.AppCompatCheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+            </RelativeLayout>
+        </androidx.core.widget.NestedScrollView>
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>
+</layout>

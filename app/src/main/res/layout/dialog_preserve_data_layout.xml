@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <com.luminous.pdi.custom_text_view.TextViewSemiBold
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="center"
+        android:padding="10dp"
+        android:id="@+id/dialogmessage"
+        android:textSize="20dp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:textStyle="bold"
+        android:text="Are you sure to preserve this data?"
+        android:textColor="@color/colorBlack" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colordivider"></TextView>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_margin="15dp"
+        android:layout_height="wrap_content"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:layout_marginRight="1dp">
+            <TextView
+                android:id="@+id/tvPreserveOK"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:gravity="center"
+                android:padding="10dp"
+                android:textSize="16sp"
+                android:text="OK"
+                android:textColor="@color/color_blue" />
+
+        </LinearLayout>
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/colordivider"></TextView>
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:gravity="center"
+            android:layout_marginLeft="1dp">
+            <TextView
+                android:gravity="center"
+                android:id="@+id/tvPreserveCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:padding="10dp"
+                android:textSize="16sp"
+                android:text="Cancel"
+                android:textColor="@color/shortClose" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

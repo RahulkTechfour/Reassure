@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:id="@+id/addproductfandraftvisitlist_toolbar"
+        android:background="#2A50CB">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_backarrow"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:id="@+id/fanDraft_backimage"
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add Product"
+                android:layout_centerInParent="true"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/_20sdp"
+                />
+
+            <ImageView
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:src="@drawable/ic_delete"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:id="@+id/fanDraft_deleteImage"
+                android:visibility="gone"
+                />
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/layout_border"
+        android:layout_below="@+id/addproductfandraftvisitlist_toolbar"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/linealayout_scroll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_margin="20dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <com.luminous.pdi.custom_text_view.TextViewSemiBold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Quantity:"
+                                android:layout_marginLeft="@dimen/_2sdp"
+                                android:textSize="@dimen/_12sdp"
+                                />
+
+                            <com.luminous.pdi.custom_text_view.TextViewSemiBold
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_marginLeft="@dimen/_2sdp"
+
+                                android:textSize="@dimen/_12sdp"
+                                android:text="Inspection Date:"
+                                />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="5dp"
+                            android:weightSum="2">
+
+                            <EditText
+                                android:id="@+id/et_DraftFanQnty"
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/editHeightSize"
+                                android:layout_weight="1"
+                                android:layout_gravity="center"
+                                android:textSize="14dp"
+                                android:enabled="false"
+                                android:editable="false"
+                                android:clickable="false"
+                                android:background="@drawable/my_edit_text_border"
+                                android:inputType="number"
+                                android:paddingLeft="15dp"/>
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:layout_marginLeft="10dp">
+
+                                <EditText
+                                    android:id="@+id/et_DraftFanInspectionDate"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/editHeightSize"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:textSize="14dp"
+                                    android:enabled="false"
+                                    android:editable="false"
+                                    android:clickable="false"
+                                    android:background="@drawable/my_edit_text_border"
+                                    android:paddingLeft="15dp" />
+
+                                <ImageView
+                                    android:id="@+id/iv_inspection_calendar"
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_margin="10dp"
+                                    android:layout_centerVertical="true"
+                                    android:clickable="true" />
+                            </RelativeLayout>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_marginLeft="@dimen/_2sdp"
+
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <com.luminous.pdi.custom_text_view.TextViewSemiBold
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="Serial No."
+                                    android:textSize="14dp" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_5sdp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:background="@drawable/scan_rect_view">
+
+                                    <ImageView
+                                        android:id="@+id/ivDraftScan"
+                                        android:layout_width="90dp"
+                                        android:layout_height="90dp"
+                                        android:layout_margin="20dp"
+                                        android:layout_gravity="center"
+                                        android:background="@drawable/barcode"
+                                        />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <com.luminous.pdi.custom_text_view.TextViewSemiBold
+                                android:id="@+id/tv_DraftFanManualLink"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:gravity="center|left"
+                                android:text="@string/hyperlink"
+                                android:textColor="@color/color_enterman"
+                                android:textSize="16dp" />
+                        </LinearLayout>
+
+
+                        <EditText
+                            android:id="@+id/et_DraftFanSerialNo"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/editHeightSize"
+                            android:layout_marginTop="15dp"
+                            android:textSize="@dimen/_12sdp"
+                            android:background="@drawable/my_edit_text_border"
+                            android:imeOptions="actionDone"
+                            android:inputType="text"
+                            android:hint="Serial No."
+                            android:paddingLeft="10dp"/>
+
+                        <com.luminous.pdi.custom_text_view.TextViewSemiBold
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:textSize="@dimen/_12sdp"
+                            android:layout_marginLeft="@dimen/_3sdp"
+                            android:text="Material Name"/>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/editHeightSize"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:background="@drawable/my_edit_text_border">
+
+                            <EditText
+                                android:id="@+id/et_DraftMaterialName"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/editHeightSize"
+                                android:gravity="center_vertical"
+                                android:textSize="@dimen/_12sdp"
+                                android:hint="Material Name"
+                                android:enabled="false"
+                                android:editable="false"
+                                android:clickable="false"
+                                android:background="@null"
+                                android:paddingLeft="10dp"/>
+
+                            <ImageView
+                                android:id="@+id/iv_Draftmaterial_name"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:clickable="true" />
+                        </RelativeLayout>
+
+                        <com.luminous.pdi.custom_text_view.TextViewSemiBold
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:textSize="@dimen/_12sdp"
+                            android:layout_marginLeft="@dimen/_3sdp"
+
+                            android:text="Fault Details"/>
+
+                      <!--  <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:layout_height="60dp"
+                            android:background="@drawable/my_edit_text_border">
+
+
+                            <Spinner
+                                android:id="@+id/sp_DraftFanFault"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/editHeightSize"
+                                android:textSize="14dp"/>
+
+                            <ImageView
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:background="@drawable/arrow_drop_down"
+                                android:clickable="true" />
+
+                        </RelativeLayout>-->
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/editHeightSize"
+                            android:layout_marginTop="@dimen/_5sdp">
+
+                            <Spinner
+                                android:id="@+id/sp_DraftFanFault"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/editHeightSize"
+                                android:background="@drawable/my_edit_text_border"/>
+
+
+                            <ImageView
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:background="@drawable/arrow_drop_down"
+                                android:clickable="true" />
+
+                        </RelativeLayout>
+
+
+                        <com.luminous.pdi.custom_text_view.TextViewSemiBold
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_3sdp"
+                            android:textSize="@dimen/_12sdp"
+                            android:text="Product Status"/>
+
+                        <RadioGroup
+                            android:id="@+id/rg_DraftFanStatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/rad_DraftFanSold"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:buttonTint="@color/colorAccent"
+                                android:textSize="14sp"
+                                android:text="Sold" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Unsold"
+                                android:id="@+id/rad_DraftFanUnSold"
+                                android:textSize="14sp"
+                                android:buttonTint="@color/colorAccent"/>
+                        </RadioGroup>
+
+                        <com.luminous.pdi.custom_text_view.TextViewSemiBold
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/_12sdp"
+                            android:layout_marginLeft="@dimen/_3sdp"
+                            android:text="Date of Purchase"/>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="@dimen/_5sdp">
+
+                            <EditText
+                                android:id="@+id/et_DraftFanPurchaseDate"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/editHeightSize"
+                                android:background="@drawable/my_edit_text_border"
+                                android:hint="Select Date Purchase "
+                                android:enabled="false"
+                                android:editable="false"
+                                android:clickable="true"
+                                android:focusable="false"
+                                android:textSize="@dimen/_12sdp"
+                                android:paddingLeft="10dp"/>
+
+
+                            <ImageView
+                                android:id="@+id/ivDraftPDate"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_marginRight="@dimen/_10sdp"
+                                android:layout_centerVertical="true"
+                                android:layout_alignParentRight="true"
+                                android:background="@drawable/calendar"
+                                android:clickable="true"
+                                android:layout_margin="10dp"/>
+                        </RelativeLayout>
+
+                        <com.luminous.pdi.custom_text_view.TextViewSemiBold
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/_12sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_marginLeft="@dimen/_3sdp"
+                            android:text="Warranty Status"/>
+
+                        <EditText
+                            android:id="@+id/et_DraftFanWarrantyStatus"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/editHeightSize"
+                            android:background="@drawable/my_edit_text_border"
+                            android:hint="Warranty Status"
+                            android:enabled="false"
+                            android:editable="false"
+                            android:clickable="false"
+                            android:inputType="text"
+                            android:textSize="@dimen/_12sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:paddingLeft="10dp"/>
+
+                        <com.luminous.pdi.custom_text_view.TextViewSemiBold
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/_12sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_marginLeft="@dimen/_3sdp"
+                            android:text="Invoice No."/>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/editHeightSize"
+                            android:layout_marginTop="@dimen/_5sdp">
+
+                            <Spinner
+                                android:id="@+id/sp_DraftFanInvoice"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/editHeightSize"
+                                android:background="@drawable/my_edit_text_border"/>
+
+                            <ImageView
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:background="@drawable/arrow_drop_down"
+                                android:clickable="true" />
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+
+                            android:paddingBottom="100dp">
+
+                            <com.luminous.pdi.custom_text_view.TextViewSemiBold
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:textSize="@dimen/_12sdp"
+                                android:layout_marginLeft="@dimen/_3sdp"
+                                android:text="Claim status"/>
+
+                            <RadioGroup
+                                android:id="@+id/rg_DraftFanClaimStatus"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/editHeightSize"
+                                android:layout_gravity="left"
+                                android:gravity="left"
+                                android:layout_marginRight="10dp"
+                                android:orientation="horizontal">
+                                <RadioButton
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Accepted"
+                                    android:id="@+id/radio_DraftFanClaimAccepted"
+                                    android:textSize="14sp"
+                                    />
+
+                                <RadioButton
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Rejected"
+                                    android:id="@+id/radio_DraftFanClaimRejected"
+                                    android:textSize="14sp" />
+                            </RadioGroup>
+                        </LinearLayout>
+                    </LinearLayout>
+                </ScrollView>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentBottom="true"
+                android:weightSum="3">
+
+                <Button
+                    android:id="@+id/btn_DraftFanPrev"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:text="PREVIOUS"
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="@color/colorWhite"
+                    android:background="@color/previous"/>
+
+                <Button
+                    android:id="@+id/btn_DraftFanSubmit"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:text="SUBMIT"
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="@color/colorWhite"
+                    android:background="@color/submit"/>
+
+                <Button
+                    android:id="@+id/btn_DraftFanNext"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:text="NEXT"
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="@color/colorWhite"
+                    android:background="@color/next"/>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    </RelativeLayout>
+</layout>

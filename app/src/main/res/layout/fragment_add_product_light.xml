@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   >
+    <Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/toolbar_border"
+        android:id="@+id/back_toolbar"
+        >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+       <!-- <ImageView
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/noun_arrow"
+            />-->
+        <com.luminous.pdi.custom_text_view.TextViewSemiBold
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="26dp"
+            android:id="@+id/tv_pdivisitlist"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:textColor="#FFFFFF"
+            android:text="Add Product"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           android:layout_alignParentEnd="true"
+            android:layout_marginRight="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            />
+
+    </RelativeLayout>
+    </Toolbar>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/viewpdivisitlist"
+        android:layout_below="@+id/back_toolbar"
+        android:background="@drawable/toolbar_border"
+        />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/back_toolbar"
+        android:layout_above="@+id/addproduct_lineight"
+        >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/layout_border"
+        android:layout_below="@+id/back_toolbar"
+        android:id="@+id/addproduct_relfoue"
+        >
+
+
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="20dp"
+    android:id="@+id/addproduct_relone"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/addproduct_linone"
+        >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+        <com.luminous.pdi.custom_text_view.TextViewRegular
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quantity:"
+            android:id="@+id/addproductauantity"
+            android:textSize="17sp"
+            />
+      <EditText
+          android:layout_width="170dp"
+          android:layout_height="40dp"
+          android:hint="0/200"
+          android:padding="10dp"
+          android:inputType="number"
+          android:textColor="#4D4D4D"
+          android:background="@drawable/edittextt_border"
+          android:textSize="15sp"
+          android:layout_marginTop="5dp"
+          android:layout_below="@+id/addproductauantity"
+          android:id="@+id/et_addproductquantityammount"
+          />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            >
+
+
+            <com.luminous.pdi.custom_text_view.TextViewRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Inspection Date:"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:id="@+id/addproductinspectiodate"
+                android:textSize="17sp"
+                />
+            <EditText
+                android:layout_width="170dp"
+                android:layout_height="40dp"
+                android:hint="22 Jan 2020"
+                android:textColor="#4D4D4D"
+                android:drawableRight="@drawable/ic_calendar"
+                android:background="@drawable/edittextt_border"
+                android:textSize="15sp"
+                android:drawableTint="@color/cardview_dark_background"
+                android:padding="10dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/addproductinspectiodate"
+                android:id="@+id/et_addproductquantityinspectiondate"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <com.luminous.pdi.custom_text_view.TextViewRegular
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvaddproduct_serialname"
+        android:textSize="17sp"
+        android:layout_marginTop="17dp"
+        android:layout_below="@+id/addproduct_linone"
+        android:text="Material Name:"
+        />
+   <EditText
+       android:layout_width="match_parent"
+       android:layout_height="45dp"
+       android:layout_below="@+id/tvaddproduct_serialname"
+       android:id="@+id/addproductet_materialname"
+       android:drawableRight="@drawable/noun_search"
+       android:padding="10dp"
+       android:textSize="15sp"
+       android:layout_marginTop="8dp"
+       android:background="@drawable/edittextt_border"
+       android:hint="LIGHT ECSTACY CEIL JADE"
+       android:textColor="#4D4D4D"
+       android:drawableTint="@color/cardview_dark_background"
+       />
+
+    <com.luminous.pdi.custom_text_view.TextViewRegular
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Invoice No."
+        android:layout_below="@+id/addproductet_materialname"
+        android:textSize="17sp"
+        android:layout_marginTop="17dp"
+        android:id="@+id/addproducttv_invoiceno"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:orientation="horizontal"
+        android:id="@+id/addproduct_linthree"
+        android:layout_below="@+id/addproducttv_invoiceno"
+        >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1.5"
+            android:padding="10dp"
+            android:id="@+id/addproductet_invoiceno"
+            android:textColor="#4D4D4D"
+            android:hint="1234567"
+            android:layout_marginTop="8dp"
+
+            android:drawableTint="@color/cardview_dark_background"
+            android:background="@drawable/edittextt_border"
+            />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="0.4"
+            android:layout_height="45dp"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center"
+            android:background="@drawable/background_addimage"
+
+            />
+
+    </LinearLayout>
+
+
+
+
+
+</RelativeLayout>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="13dp"
+    android:layout_below="@+id/addproduct_relone"
+    android:background="#EFEFEF"
+    android:id="@+id/addproduct_reltwo"
+   />
+
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/addproduct_relthree"
+    android:layout_margin="20dp"
+    android:layout_below="@+id/addproduct_reltwo"
+    >
+
+    <com.luminous.pdi.custom_text_view.TextViewRegular
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fault Details:"
+        android:textSize="17sp"
+        android:layout_marginTop="5dp"
+        android:id="@+id/addproducttv_faultdetails"
+
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_weight="1.5"
+        android:padding="10dp"
+        android:textColor="#4D4D4D"
+        android:layout_marginTop="8dp"
+        android:id="@+id/addproductet_selectfault"
+        android:hint="Select Fault"
+        android:layout_below="@+id/addproducttv_faultdetails"
+        android:drawableTint="@color/cardview_dark_background"
+        android:background="@drawable/edittextt_border"
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="17dp"
+        android:layout_below="@+id/addproductet_selectfault"
+        android:id="@+id/addproduct_linfour"
+        >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            >
+
+
+            <com.luminous.pdi.custom_text_view.TextViewRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Quantity:"
+                android:id="@+id/addproducttv_auantity"
+                android:textSize="17sp"
+                />
+            <EditText
+                android:layout_width="170dp"
+                android:layout_height="45dp"
+                android:hint="Quantity"
+                android:padding="10dp"
+                android:textColor="#4D4D4D"
+                android:background="@drawable/edittextt_border"
+                android:textSize="15sp"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/addproducttv_auantity"
+                android:id="@+id/ett_addproductquantityammount"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+
+            >
+
+
+            <com.luminous.pdi.custom_text_view.TextViewRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Batch No."
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:id="@+id/addproductbatchno"
+                android:textSize="17sp"
+                />
+            <EditText
+                android:layout_width="170dp"
+                android:layout_height="45dp"
+                android:hint="Batch No."
+                android:textColor="#4D4D4D"
+                android:background="@drawable/edittextt_border"
+                android:textSize="15sp"
+                android:padding="10dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/addproductbatchno"
+                android:id="@+id/et_addproductbatchno"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="17dp"
+        android:layout_below="@+id/addproduct_linfour"
+        android:id="@+id/addproduct_linfive"
+        >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <com.luminous.pdi.custom_text_view.TextViewRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MFG Month:"
+                android:id="@+id/addproducttv_manufacturedate"
+                android:textSize="17sp"
+
+                />
+            <EditText
+                android:layout_width="170dp"
+                android:layout_height="45dp"
+                android:hint="Select Date:"
+                android:padding="10dp"
+                android:textColor="#4D4D4D"
+                android:background="@drawable/edittextt_border"
+                android:textSize="15sp"
+                android:drawableRight="@drawable/ic_calendar"
+                android:drawableTint="@color/cardview_dark_background"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/addproducttv_manufacturedate"
+                android:id="@+id/ett_addproductselectdate"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            >
+
+
+            <com.luminous.pdi.custom_text_view.TextViewRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Warranty status"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:id="@+id/addproductwarrantystatus"
+                android:textSize="17sp"
+                />
+            <EditText
+                android:layout_width="170dp"
+                android:layout_height="50dp"
+                android:hint="Warranty status:"
+                android:textColor="#4D4D4D"
+                android:background="@drawable/edittextt_border"
+                android:textSize="15sp"
+                android:padding="10dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/addproductwarrantystatus"
+                android:id="@+id/et_addproductwarrantystatus"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginTop="17dp"
+    android:id="@+id/addproduct_linsix"
+    android:layout_below="@+id/addproduct_linfive"
+    >
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="ADD"
+        android:textSize="18dp"
+        android:textColor="#FFFFFF"
+        android:id="@+id/addproduct_addbrn"
+        />
+    <com.luminous.pdi.custom_text_view.TextViewRegular
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset"
+        android:textColor="#7083B9"
+        android:layout_marginLeft="25dp"
+        android:textSize="20sp"
+        android:id="@+id/tvaddproduct_reset"
+        />
+</LinearLayout>
+
+</RelativeLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:orientation="horizontal"
+    android:id="@+id/addproduct_linine"
+    android:background="#EFEFEF"
+    android:weightSum="5"
+    android:layout_below="@+id/addproduct_relthree"
+    >
+
+    <com.luminous.pdi.custom_text_view.TextViewSemiBold
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:layout_marginTop="7dp"
+        android:text="Fault Picklist"
+        />
+    <com.luminous.pdi.custom_text_view.TextViewSemiBold
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Qty"
+        android:layout_marginTop="7dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        />
+    <com.luminous.pdi.custom_text_view.TextViewSemiBold
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Batch NO."
+        android:layout_weight="1"
+        android:layout_marginTop="7dp"
+        android:gravity="center_vertical"
+        />
+    <com.luminous.pdi.custom_text_view.TextViewSemiBold
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mfg"
+        android:layout_weight="1"
+        android:layout_marginTop="7dp"
+        android:gravity="center_vertical"
+        />
+    <com.luminous.pdi.custom_text_view.TextViewSemiBold
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wty"
+        android:layout_weight="1"
+        android:layout_marginTop="7dp"
+        android:gravity="center_vertical"
+        />
+
+
+</LinearLayout>
+
+<androidx.recyclerview.widget.RecyclerView
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:id="@+id/addproductlist_recycleviw"
+    android:layout_below="@+id/addproduct_linine"
+    />
+<View
+    android:layout_width="match_parent"
+    android:layout_height="10dp"
+    android:background="#EFEFEF"
+    android:layout_below="@+id/addproductlist_recycleviw"
+    android:id="@+id/addproduct_viewone"
+
+    />
+<com.luminous.pdi.custom_text_view.TextViewRegular
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Claim Status"
+    android:textSize="17sp"
+    android:layout_marginTop="18dp"
+    android:id="@+id/tvaddproduct_claim"
+    android:layout_below="@+id/addproduct_viewone"
+    />
+
+
+ <RadioGroup
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:orientation="horizontal"
+     android:layout_below="@+id/tvaddproduct_claim"
+     >
+
+     <RadioButton
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="Accepted"
+         />
+
+     <RadioButton
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="Rejected"
+         />
+ </RadioGroup>
+    </RelativeLayout>
+
+
+</androidx.core.widget.NestedScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/addproduct_lineight"
+        >
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/addproduct_btnprevious"
+            android:background="#FEECD0"
+            android:text="Previous"
+            android:layout_weight="1"
+            android:textColor="#FFFFFF"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/addproduct_btnsubmit"
+            android:background="#0D40AB"
+            android:text="Submit"
+            android:layout_weight="1"
+            android:textColor="#FFFFFF"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/addproduct_btn"
+            android:background="#3D9234"
+            android:text="Next"
+            android:layout_weight="1"
+            android:textColor="#FFFFFF"
+            />
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>
+</layout>
